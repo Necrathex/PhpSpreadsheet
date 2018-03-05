@@ -4,7 +4,7 @@ namespace PhpOffice\PhpSpreadsheetTests\Functional;
 
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 
-class FreezePane extends AbstractFunctional
+class FreezePaneTest extends AbstractFunctional
 {
     public function providerFormats()
     {
@@ -21,8 +21,8 @@ class FreezePane extends AbstractFunctional
      */
     public function testFreezePane($format)
     {
-        $cellSplit = 'B2';
-        $topLeftCell = 'E5';
+        $cellSplit = 'B4';
+        $topLeftCell = 'E7';
 
         $spreadsheet = new Spreadsheet();
         $spreadsheet->getActiveSheet()->freezePane($cellSplit, $topLeftCell);
